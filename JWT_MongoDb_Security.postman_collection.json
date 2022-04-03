@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "145a4ef2-fa8f-4cc2-8abf-cd2acd867111",
+		"name": "JWT_MongoDb_Security",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/user/save",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"lvs\",\r\n    \"password\": \"chaudhary22\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        \"ROLE_ADMIN\",\r\n        \"ROLE_USER\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"save"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/user/save",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lvs\",\r\n    \"password\": \"chaudhary22\",\r\n    \"enabled\": true,\r\n    \"roles\": [\r\n        \"ROLE_ADMIN\",\r\n        \"ROLE_USER\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/user/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"user",
+								"save"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "178"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"lvs\",\n    \"enabled\": true,\n    \"roles\": [\n        \"ROLE_USER\"\n    ],\n    \"credentialsNonExpired\": false,\n    \"accountNonExpired\": false,\n    \"accountNonLocked\": false,\n    \"authorities\": [\n        {\n            \"authority\": \"ROLE_USER\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"lvs\",\r\n    \"password\": \"chaudhary22\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"lvs\",\r\n    \"password\": \"chaudhary22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "211"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJsdnMiLCJpYXQiOjE2NDg1ODAzMTQsImV4cCI6MTY0ODYwOTExNH0.3962cz63uAXywIx7PjvG84yiLgKZ69sMPdECIuGDXQ-IkJ-VkjdOCI_MCrZLU1n4_f9fKiE6lsb6G9AieHhw3g\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/resource/user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjpbIlJPTEVfVVNFUiJdLCJzdWIiOiJsdnMiLCJpYXQiOjE2NDg1ODAzMTQsImV4cCI6MTY0ODYwOTExNH0.3962cz63uAXywIx7PjvG84yiLgKZ69sMPdECIuGDXQ-IkJ-VkjdOCI_MCrZLU1n4_f9fKiE6lsb6G9AieHhw3g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/resource/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"resource",
+						"user"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "http://localhost:8080/resource/user",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/resource/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"resource",
+								"user"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "30"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1 ; mode=block"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": \"Content for user\"\n}"
+				}
+			]
+		}
+	]
+}
